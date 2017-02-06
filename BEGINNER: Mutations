@@ -1,0 +1,14 @@
+/* add description here */
+
+function mutation(arr) {
+  var subject = arr[0].toLowerCase();
+  var test = arr[1].toLowerCase();
+  
+  for (var i = 0;i < test.length; i++) {
+    if (subject.indexOf(test[i]) < 0)
+      return false;
+  }
+  return true;
+}
+
+mutation(["hello", "Hello"]); //returns true as both contain the same letters
