@@ -1,0 +1,19 @@
+/* This function takes the 'str' parameter and whatever string is passed through and it will
+   concatenate itself onto the empty 'newString' for as long as i < num in the for loop 
+   Example:
+                    repeatStringNumTimes("abc", 3);
+                    newString = "abc" (1st loop) + "abc" (2nd loop) + "abc" (3rd loop)
+                    newString = "abcabcabc"
+*/
+
+//REPEAT A STRING
+function repeatStringNumTimes(str, num) {
+  var newString = "";
+  
+  for(var i = 0; i < num; i++){
+    newString = newString.concat(str); 
+  }
+  return newString;
+}
+
+repeatStringNumTimes("abc", 3);
