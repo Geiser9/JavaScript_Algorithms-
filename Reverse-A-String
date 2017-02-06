@@ -1,0 +1,23 @@
+/* The purpose of this algorithm is to take whatever string is passed through 
+   the function's (str) parameter, loop through each character's position, and 
+   print the string in reverse order. There are two ways in which the algorithm 
+   can be comleted */
+
+// REVERSE WITH A LOOP
+function reverseString(str) {
+  var reverse = "";
+  for(var i = str.length - 1; i >= 0; i--){
+      reverse = reverse + str[i];
+  }
+  return reverse; //elloh 
+}
+
+reverseString("hello"); 
+
+// REVERSE USING AN ARRAY
+function reverseString(str) {
+  var reverse = str.split("").reverse().join("");
+  return reverse;
+}
+
+reverseString("hello");
