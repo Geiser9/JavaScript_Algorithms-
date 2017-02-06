@@ -1,0 +1,29 @@
+/* The purpose of this function is to take whatever string is passed through the parameter
+   'str' and determine which word is the lengest in length within the string. This can
+   be done with a for loop combined with an if statement or by converting the string to
+   an array and using the built in tools to sort an array. */
+   
+// USING A FOR LOOP
+function findLongestWord(str) {
+   var toArr = str.split(" "); // converts the string to an array by splitting at each whitespace
+   var longest = 0; // setting it zero as a reference to compare the first word to
+  
+   for(var i = 0; i < toArr.length; i++){
+    
+     if(toArr[i].length > longest){
+       longest = toArr[i].length;
+     } 
+    }
+    return longest;
+}
+
+// USING AN ARRAY
+function findLongestWord(str) { 
+  var toArr = str.split(" ").sort(function(a, b){
+    return b.length - a.length;
+  });
+  
+  return toArr[0].length;
+}
+
+findLongestWord("The quick brown fox jumped over the lazy dog");
