@@ -1,0 +1,22 @@
+/* The purpose of this function is to take the array passed through the parameter 'arr', loop
+   through the arrays and sort each number within the sub array from largest to smallest, take 
+   the first number (the largest) from each sorted sub array and concatenate the numbers into
+   the new empty array 'result'
+
+function largestOfFour(arr) {
+  var newArr = []; //empty array to be concatenated into
+  
+  for(var i = 0; i < arr.length; i++){
+    
+      var largestNum = arr[i].sort(function(a, b){
+        return b - a; //returns sorted arrays from largest to smallest numbers
+      });
+     
+      newArr = newArr.concat(arr[i][0]); //loops through each array, grabs the first number in each array (the largest), 
+                                         // and concatenates it into the empty array 'result'
+  }
+  
+  return newArr;
+}
+  
+largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
