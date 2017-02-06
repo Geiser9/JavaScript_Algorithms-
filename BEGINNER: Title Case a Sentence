@@ -1,0 +1,20 @@
+/* The purpose of this function is to take an string passed through the parameter 'str',
+   convert it to lowercase, split it into an array, and iterate over the string with the
+   .map() method, and finally using the .replace() method to replace the non capital letter
+   with a capital letter to be converted back to a string with the .join() method */
+   
+   
+//CAPITALIZE THE FIRST LETTER OF EACH WORD
+function titleCase(str) {
+  var toArr = str.toLowerCase().split(" "); // converts the string into lowercase and
+                                            //splits the string (at whitespace) and converts it into and array
+  
+  var result = toArr.map(function(val){
+    return val.replace(val.charAt(0), val.charAt(0).toUpperCase());
+  });
+  
+   return result.join(" "); // result alone would return ["I'm", "A", "Little", "Tea", "Pot"]
+                            // .join(" ") converts the array back to a string with whitespace
+}
+
+titleCase("I'm a little tea pot");
