@@ -1,0 +1,15 @@
+/* The purpose of this piece of code is to take the factorial of a whatever number
+   is passed through the function as 'num'. Example: 4! = 1 x 2 x 3 x 4 = 24
+   Setting result = 1 ensures the product cannot be 0 */
+   
+function factorial(num) {
+  var result = 1; // this is the multiplier to ensure 0 
+                 // wont make the result 0 to start
+  
+  for(var i = 1; i < num + 1; i++){
+    result = result * i;
+  }
+  return result; // 24
+}
+
+factorial(4);
