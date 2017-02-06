@@ -1,0 +1,22 @@
+/* ***Do not use the built-in method .endsWith() to solve the challenge*** */
+
+/* This function takes in two parameters 'str' and 'target'. 'str' is the entire phrase where as 
+   'target' is what you are trying to end with. By creating a substring we can splice off a desired
+   section of a string. The substring() method requires a parameter for the character position you want
+   to splice it at.
+                      str.length (28) - target.length (4) = length of (24) 
+                      str.substring(24) = "name" 
+                      target = "name"
+                      boolean = true 
+ */
+ 
+// CONFIRM THE ENDING W/o ".endsWith()" METHOD
+function confirmEnding(str, target) {
+  if(str.substring(str.length - target.length) === target){
+    return true;
+  }
+  return false;
+}
+
+confirmEnding("He has to give me a new name", "name"); //true
+
