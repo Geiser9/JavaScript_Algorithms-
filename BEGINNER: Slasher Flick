@@ -1,0 +1,11 @@
+/* Add a description here */
+
+function slasher(arr, howMany) {
+  if(howMany > 0){
+    return arr.splice(howMany);
+  } else {
+    return arr;
+  }  
+}
+
+slasher(["burgers", "fries", "shake"], 1); //returns ["fries", "shake"] as it should
