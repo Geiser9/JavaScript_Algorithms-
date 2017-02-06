@@ -1,0 +1,16 @@
+/* The purpose of this code is to take whatever string is passed through as the 
+   parameter 'str', convert it all to lowercase, replace the string with only the 
+   desired characters (a-z, A-Z, 0-9), split the array, reverse it, and join it
+   back together with no whitespace. Lastly the function will return with a boolean 
+   value based on if it is or is not a Palindrome */
+
+function palindrome(str) {
+  
+  var string = str.toLowerCase().replace(/[^a-zA-Z0-9]/g, "");
+  var reverseStr = string.split("").reverse().join("");
+  
+  return string === reverseStr;
+  
+}
+
+palindrome("A man, a plan, a canal. Panama");
